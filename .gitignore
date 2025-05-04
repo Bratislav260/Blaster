@@ -60,6 +60,7 @@ _ReSharper*
 [Bb]uilds/
 [Ll]ogs/
 MemoryCaptures/
+UserSettings/
 
 # Артефакты CI/CD
 TestResults/
@@ -67,15 +68,6 @@ TestResults/
 # Системные файлы
 .DS_Store
 Thumbs.db
-
-# Unity-системные папки
-[Ll]ibrary/
-[Tt]emp/
-[Oo]bj/
-[Bb]uild/
-[Bb]uilds/
-[Ll]ogs/
-UserSettings/
 
 # Кеши Unity
 MemoryCaptures/
@@ -119,3 +111,8 @@ Library/
 
 # Burst and Cache folders
 Library/PackageCache/com.unity.burst@*
+
+# Пакеты и настройки
+!Packages/manifest.json
+!Packages/packages-lock.json
+!Packages/
