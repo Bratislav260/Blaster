@@ -6,10 +6,10 @@ public class Kalashnikov : Weapon
     {
         if (magazinCurrent > 0 && isAvableAttack)
         {
-            // if (isPlayer)
-            // {
-            //     CinemachineShake.Instance.ShakeCamera(2f);
-            // }
+            if (isPlayer)
+            {
+                CinemachineShake.Instance.ShakeCamera(2f);
+            }
 
             Bullet bullet = Instantiate(weaponInfo.bullet, firePoint.position, firePoint.rotation);
             ParticleManager.Instance.CallPartical("Sparks", firePoint);
@@ -21,7 +21,6 @@ public class Kalashnikov : Weapon
             if (magazinCurrent <= 0)
             {
                 isAvableAttack = false;
-                // rechargeAnimation.StartRechareAnimation(transform.parent, weaponInfo.recharge);
 
                 SoundSystem.Instance.Sound("KalashReload").Play();
                 Invoke(nameof(Recharge), weaponInfo.GetStat(WeaponStats.recharge));

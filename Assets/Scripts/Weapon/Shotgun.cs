@@ -7,10 +7,10 @@ public class Shotgun : Weapon
     {
         if (magazinCurrent > 0 && isAvableAttack)
         {
-            // if (isPlayer)
-            // {
-            //     CinemachineShake.Instance.ShakeCamera(4f);
-            // }
+            if (isPlayer)
+            {
+                CinemachineShake.Instance.ShakeCamera(4f);
+            }
 
             int bulletsAmout = Random.Range(10, 15);
 
@@ -32,7 +32,6 @@ public class Shotgun : Weapon
             if (magazinCurrent <= 0)
             {
                 isAvableAttack = false;
-                // rechargeAnimation.StartRechareAnimation(transform.parent, weaponInfo.recharge);
                 Invoke(nameof(Recharge), weaponInfo.GetStat(WeaponStats.recharge));
 
                 SoundSystem.Instance.Sound("ShotgunRecharge").Play();

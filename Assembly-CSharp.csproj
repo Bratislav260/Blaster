@@ -102,6 +102,7 @@
     <Compile Include="Assets\Scripts\UI\TimerUI.cs" />
     <Compile Include="Assets\Scripts\Enemy\Abstr\AbstrMovement.cs" />
     <Compile Include="Assets\Scripts\Weapon\Kalashnikov.cs" />
+    <Compile Include="Assets\Scripts\Camera\Shake.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\System\SoundSystem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
